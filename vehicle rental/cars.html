@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Cars - Car Rental System</title>
+    <link rel="stylesheet" href="css/cars.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <i class="fas fa-car"></i> Car Rental
+        </div>
+        <div class="nav-links">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="cars.html" class="active">Cars</a>
+            <a href="bookings.html">My Bookings</a>
+            <a href="profile.html">Profile</a>
+            <a href="login.html" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="filters">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search cars...">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="filter-options">
+                <select id="categoryFilter">
+                    <option value="">All Categories</option>
+                    <option value="SUV">SUV</option>
+                    <option value="Sedan">Sedan</option>
+                    <option value="Sports">Sports</option>
+                    <option value="Luxury">Luxury</option>
+                </select>
+                <select id="priceFilter">
+                    <option value="">Price Range</option>
+                    <option value="0-50">$0 - $50/day</option>
+                    <option value="51-100">$51 - $100/day</option>
+                    <option value="101+">$101+/day</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="cars-grid" id="carsGrid">
+            <!-- Cars will be dynamically added here -->
+        </div>
+    </main>
+
+    <!-- Car Details Modal -->
+    <div id="carModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="car-details">
+                <!-- Car details will be dynamically added here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/cars.js"></script>
+</body>
+</html> 

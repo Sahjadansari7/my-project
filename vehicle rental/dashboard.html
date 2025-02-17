@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Car Rental System</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <i class="fas fa-car"></i> Car Rental
+        </div>
+        <div class="nav-links">
+            <a href="dashboard.html" class="active">Dashboard</a>
+            <a href="cars.html">Cars</a>
+            <a href="bookings.html">My Bookings</a>
+            <a href="profile.html">Profile</a>
+            <a href="login.html" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <!-- Welcome Section -->
+        <div class="welcome-section">
+            <h1>Welcome Back, <span id="userName">User</span>!</h1>
+            <p class="date" id="currentDate"></p>
+        </div>
+
+        <!-- Stats Cards -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-car"></i>
+                </div>
+                <div class="stat-info">
+                    <h3>Available Cars</h3>
+                    <p>24</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-calendar-check"></i>
+                </div>
+                <div class="stat-info">
+                    <h3>Active Bookings</h3>
+                    <p>3</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-history"></i>
+                </div>
+                <div class="stat-info">
+                    <h3>Total Rentals</h3>
+                    <p>12</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-dollar-sign"></i>
+                </div>
+                <div class="stat-info">
+                    <h3>Total Spent</h3>
+                    <p>$1,250</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Bookings -->
+        <div class="dashboard-section">
+            <h2>Recent Bookings</h2>
+            <div class="recent-bookings">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Car</th>
+                            <th>From</th>
+                            <th>To</th>
+                            <th>Total</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="recentBookingsTable">
+                        <!-- Bookings will be added here dynamically -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Featured Cars -->
+        <div class="dashboard-section">
+            <h2>Featured Cars</h2>
+            <div class="featured-cars" id="featuredCars">
+                <!-- Featured cars will be added here dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html> 
